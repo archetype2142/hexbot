@@ -1,0 +1,10 @@
+<%= link_to 'Go back', root_path, class: "btn btn-primary" %>
+<span>Showing results for color #<%= @image.color %></span>
+<br><br>
+<div class="card-columns">
+	<% @image.urls.each do |img| %>
+		<div class="card">
+			<%= image_tag img.link, class: "card-img-top" %>
+	  </div>
+	<% end %>
+</div>
