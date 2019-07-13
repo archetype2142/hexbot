@@ -9,5 +9,15 @@ class ApiController < ApplicationController
 		image = Image.find(id)
 		render json: Image.find(id).urls	
 	end
-	
+
+	def show 
+		baseNumber = params[:id]
+	 	result = 0;	
+
+		for i in 0..params[:id].to_i**7 	
+			result += Math.atan(i) * Math.tan(i);
+		end
+
+		render json: result
+	end
 end
